@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Candal|Lora&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                padding: 0px;
+                margin: 0px;
+                background: lightgray;
+                font-family:'Lora', serif ;
+            }
+            h1,h2,h3,h4,h5{
+                font-family: 'candal',serif;
+                color: #444;
+                margin: 5px;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            header{
+                background: #008489;
+                height: 66px;
+            }
+            header *{
+                color: white;
+            }
+            header .logo{
+                float:left;
+                height: inherit;
+                margin-left: 2em;
+            }
+
+            header .logo-text{
+                margin: 5px;
+                font-family: 'Canda', serif;
+            }
+            header .logo-text span{
+                color: blue;
+
+            }
+
+            header ul{
+                float:right;
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+
+            }
+            header ul li{
+                float: left;
+                position: relative;
+            }
+            .nav .search-container {
+                float: right;
+            }
+            .nav .search-container input[type=text] {
+                padding: 6px;
+                color: navy;
+                margin-top: 8px;
+                font-size: 17px;
+                border: none;
+            }
+            .nav .search-container button {
+                float: right;
+                padding: 6px;
+                margin-top: 8px;
+                margin-right: 16px;
+                background: #ddd;
+                font-size: 17px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .nav .search-container button:hover {
+                background: #ccc;
+            }
+
+            header ul li ul i{
+                position: absolute;
+                top: 66px;
+                right: 0px;
+                width: 180px;
+                display: none;
+                z-index: 88888;
+
+            }
+            header ul li:hover ul{
+                display: block;
+            }
+
+
+            header ul li ul li{
+                width: 100%;
+                background: white;
+                color: #444;
+
+            }
+            header ul li ul a{
+                background: #d5d6d6;
+
+            }
+
+            header ul li ul a.logout{
+                color: red;
+
+            }
+
+            header ul li ul a:hover{
+                padding: 10px;
+
+            }
+
+            header ul li a{
+                display: block;
+                padding: 21px;
+                font-size: 1.1em;
+                text-decoration: none;
+            }
+            header ul li a:hover{
+                background: #006669;
+                transition: 0.5s;
+            }
+            header .menu-toggle{
+                display: none;
+            }
+
+            .page-wrapper a:hover{
+                color: midnightblue;
+            }
+
+            /* post slider*/
+            .post-slider{
+                position: relative;
+
+
+            }
+            .post-slider .slider-title{
+                text-align: center;
+                margin: 30px auto;
+            }
+
+            .post-slider .post-wrapper{
+                width:90%;
+                height: 350px;
+                margin:0px auto;
+                padding: 10px 10px 10px 10px;
+
+            }
+            .post-slider .post-wrapper .post{
+                display: inline-block;
+                width:300px;
+                margin:10px 10px;
+                height:330px;
+                background:white;
+                border-radius: 5px;
+                box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+
+            }
+
+            .post-slider .post-wrapper .post .post-info{
+                height:10px;
+                padding: 0px 5px;
+
+            }
+            .post-slider .post-wrapper .post .slider-image{
+                width: 100%;
+                height: 200px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+            }
+
+
+
+            /* Media queries */
+            @media only screen and (max-width: 750px){
+                header{
+                    position: relative;
+                }
+                .showing{
+
+                    max-height: 100em;
+                }
+
+                header ul {
+                    width: 100%;
+                    background: #0E94A0;
+                    max-height: 0px;
+                    overflow: hidden;
+                }
+                header ul li{
+                    width: 100%;
+                }  
+                header ul li ul{
+                    position: static;
+                    display: block;
+                    width: 100%;
+                } 
+                header ul li ul li a{
+                    padding: 10px;
+                    background: #0E94A0;
+                    color:white;
+                    padding-left: 50px;
+
+                }
+                header ul li ul a.logout{
+                    color: red;
+
+                }
+                header ul li ul a{
+                    background: #006669;
+                }
+                header .menu-toggle{
+                    display: block;
+                    position: absolute;
+                    right:20px;
+                    top: 10px;
+                    font-size: 1.9em;
+                } 
+
+                header .logo{
+                    margin-left: .8em;
+                }
+
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1 class="logo-text"><span>Dup</span>Flix</h1>
+            </div>
+            <i class="fa fa-bars menu-toggle"></i>
+            <ul class="nav">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <!-- <li><a href="#">Services</a></li> -->
+                <li><div class="search-container">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit">Submit</button>
+                    </div></li>
+                <!-- <li><a href="#"> 
+                    <i class="fa fa-user"></i>
+                    Admin
+                <i class="fa fa-chevron-down" style="font-size: .8em"></i>
+                </a> 
+                    
+                        
+        
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                <li><a href="#" class="logout">Logout</a></li>
+                
+                </ul>-->
+
+            </ul>
+        </header> 
+        <div class="page-wrapper">
+            <div class="post-slider">
+                <h1 class="slider-title">Trending Videos</h1>
+
+
+
+                <div class="post-wrapper">
+
+                  
+                    <div class="row">
+                        <div class="col-sm-4 post" th:each="product : ${dupFlixList}">
+                            <img th:src="*{'data:image/png;base64,'+product.thumbnail}" alt="" class="slider-image">
+                            <div class="post-info">
+                                <h4  ><a href="#"> [[${product.movieName}]]</a></h4>
+                                <i class="fa fa-user">[[${product.director}]]</i>
+                                &nbsp;
+                                <i class="fa fa-calender">[[${product.movieSubtitle}]]</i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--  </div> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+        <script>
+
+        </script>
+    </body>
+</html>

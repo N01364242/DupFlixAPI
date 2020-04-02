@@ -1,0 +1,9 @@
+com\mycompany\assignment2\DupFlixJpaController\DupFlixJPAController\exceptions\IllegalOrphanException.class
+service\AdminDatabaseService.class
+com\mycompany\assignment2\DupFlixJpaController\DupFlixJPAController\exceptions\NonexistentEntityException.class
+com\mycompany\assignment2\databaseconnection\resources\JavaEE8Resource.class
+com\mycompany\assignment2\entities\Dupflix.class
+com\mycompany\assignment2\DupFlixJpaController\DupFlixJPAController\DupflixJpaController.class
+com\mycompany\assignment2\DupFlixJpaController\DupFlixJPAController\exceptions\PreexistingEntityException.class
+com\mycompany\assignment2\databaseconnection\handler\DupFlixMovieNameHandler.class
+com\mycompany\assignment2\databaseconnection\JAXRSConfiguration.class
