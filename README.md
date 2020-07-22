@@ -9,7 +9,7 @@ Screenshots
  ![](adminaddpage.jpg)
  
   3. Admin Edit Post page
-  ![](manage post.jpg)
+  ![](managepost.jpg)
    
   4. User Page
   ![](userPage1.jpg)
